@@ -53,9 +53,9 @@ const SignupPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center p-4 bg-white">
-          <div className="flex flex-col justify-center items-center text-center p-2 border-3 border-green-600 rounded-lg bg-opacity-5 w-full max-w-md mx-auto">
-            <h1 className="text-2xl text-green-600 m-0">AYUSH</h1>
+        <div className="flex justify-between items-center px-5 py-4 bg-transparent max-w-7xl mx-auto">
+          <div className="text-center border-2 border-primary rounded-lg p-2 shadow-md inline-block glass-effect">
+            <h1 className="text-2xl font-bold text-primary m-0">AYUSH</h1>
             <p className="text-sm text-gray-600 m-0">The Virtual Herbal Garden</p>
           </div>
         </div>

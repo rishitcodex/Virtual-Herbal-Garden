@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaUser, FaCog, FaSignOutAlt } from 'react-icons/fa';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube,FaLinkedinIn } from 'react-icons/fa';
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-bg2 bg-cover bg-fixed">
+    <div className="min-h-screen flex flex-col font-sans bg-bg2 bg-cover bg-fixed" style={{ backgroundImage: "url('./public/images/bg2.jpg')" }}>
       {/* Header Section */}
       <header className="w-full">
         <div className="bg-primary text-white text-sm h-7">
@@ -25,10 +25,10 @@ const Dashboard = () => {
               </span>
             </div>
             <div className="flex gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-green-200 transition-colors"><FaFacebookF /></a>
+              <a href="https://www.facebook.com/profile.php?id=61574951247607" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-green-200 transition-colors"><FaFacebookF /></a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-green-200 transition-colors"><FaTwitter /></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-green-200 transition-colors"><FaInstagram /></a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-green-200 transition-colors"><FaYoutube /></a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-green-200 transition-colors"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/channel/UCnNFon3CLF8_PdKxxcJH2PQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-green-200 transition-colors"><FaYoutube /></a>
             </div>
           </div>
         </div>
@@ -41,17 +41,17 @@ const Dashboard = () => {
 
           <nav>
             <ul className="flex m-0 p-0 mt-10">
-              <li className="mx-4 relative">
+              <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
                 <Link to="/" className="nav-link">Home</Link>
               </li>
               <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
                 <Link to="/nurseries" className="nav-link">Nurseries</Link>
               </li>
               <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
-                <Link to="/services" className="nav-link">Services</Link>
+                <Link to="/services" className="nav-link">Vinayak</Link>
               </li>
               <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
-                <Link to="/pages" className="nav-link">Pages</Link>
+                <Link to="/products" className="nav-link">HerbalShop</Link>
               </li>
               <li className="mx-4">
                 <Link to="/about" className="nav-link">About</Link>
@@ -86,9 +86,9 @@ const Dashboard = () => {
               <Link to="/profile" className="btn-primary mt-4 inline-block">View Profile</Link>
             </div>
             <div className="p-6 bg-white/50 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Settings</h3>
-              <p className="text-gray-700">Manage your account settings</p>
-              <Link to="/settings" className="btn-primary mt-4 inline-block">Go to Settings</Link>
+              <h3 className="text-xl font-bold mb-4">HerbalShop</h3>
+              <p className="text-gray-700">Buy from us!</p>
+              <Link to="/products" className="btn-primary mt-4 inline-block">Go to Store</Link>
             </div>
             <div className="p-6 bg-white/50 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Nurseries</h3>
@@ -96,8 +96,8 @@ const Dashboard = () => {
               <Link to="/nurseries" className="btn-primary mt-4 inline-block">View Nurseries</Link>
             </div>
             <div className="p-6 bg-white/50 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Services</h3>
-              <p className="text-gray-700">Access your subscribed services</p>
+              <h3 className="text-xl font-bold mb-4">Vinayak</h3>
+              <p className="text-gray-700">Your Herbal Healing Companion</p>
               <Link to="/services" className="btn-primary mt-4 inline-block">View Services</Link>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaLock, FaUser } from 'react-ic
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
+
 // Initialize EmailJS with your public key
 emailjs.init("OpvjwIUHlvv_a78uz");
 
@@ -232,10 +233,10 @@ const LoginPage = () => {
             <p className="text-sm text-gray-600 m-0">The Virtual Herbal Garden</p>
           </div>
 
-          <nav>
+          {/* <nav>
             <ul className="flex m-0 p-0 mt-10">
-              <li className="mx-4 relative">
-                <Link to="/" className="nav-link">Home</Link>
+            <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
+                <Link to="/Home" className="nav-link">Home</Link>
               </li>
               <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
                 <Link to="/nurseries" className="nav-link">Nurseries</Link>
@@ -250,7 +251,7 @@ const LoginPage = () => {
                 <Link to="/about" className="nav-link">About</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
           <Link to="/register" className="btn-primary">
             Create Account
@@ -259,8 +260,8 @@ const LoginPage = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow relative">
-        <div className="container mx-auto px-4 py-8">
+      <main className="flex-grow relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/public/images/bg2.jpg)' }}>        
+      <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Text Box on Left */}
             <div className="p-5 rounded-xl text-secondary font-bold glass-effect">

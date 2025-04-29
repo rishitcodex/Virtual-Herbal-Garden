@@ -1,0 +1,140 @@
+.ai-container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e8f5e9, #f1f8e9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.ai-background-shape {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #c5e1a5;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+.ai-background-shape.left {
+  top: -100px;
+  left: -100px;
+}
+.ai-background-shape.right {
+  bottom: -100px;
+  right: -100px;
+}
+
+.ai-header {
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+.ai-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.ai-logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #81c784;
+  border-radius: 50%;
+}
+.ai-logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+.ai-tagline {
+  font-style: italic;
+  color: #4caf50;
+  margin-top: 8px;
+}
+
+.ai-content {
+  width: 100%;
+  max-width: 1000px;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.ai-frame-container {
+  background: #ffffff;
+  border: 2px solid #c8e6c9;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ai-iframe {
+  flex-grow: 1;
+  border: none;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.ai-frame-decoration {
+  width: 16px;
+  height: 16px;
+  background-color: #a5d6a7;
+  position: absolute;
+  border-radius: 4px;
+}
+.ai-frame-decoration.top-left {
+  top: 12px;
+  left: 12px;
+}
+.ai-frame-decoration.top-right {
+  top: 12px;
+  right: 12px;
+}
+.ai-frame-decoration.bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+.ai-frame-decoration.bottom-right {
+  bottom: 12px;
+  right: 12px;
+}
+
+.ai-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #388e3c;
+  z-index: 2;
+}
+
+.ai-pulse {
+  width: 12px;
+  height: 12px;
+  background-color: #66bb6a;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  margin: 0 auto 8px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

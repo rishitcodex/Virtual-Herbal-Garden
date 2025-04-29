@@ -25,7 +25,7 @@ const Home = () => {
               </span>
             </div>
             <div className="flex gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-green-200 transition-colors"><FaFacebookF /></a>
+              <a href="https://www.facebook.com/profile.php?id=61574951247607" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-green-200 transition-colors"><FaFacebookF /></a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-green-200 transition-colors"><FaTwitter /></a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-green-200 transition-colors"><FaInstagram /></a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-green-200 transition-colors"><FaYoutube /></a>
@@ -39,9 +39,9 @@ const Home = () => {
             <p className="text-sm text-gray-600 m-0">The Virtual Herbal Garden</p>
           </div>
 
-          <nav>
+          {/* <nav>
             <ul className="flex m-0 p-0 mt-10">
-              <li className="mx-4 relative">
+              <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
                 <Link to="/" className="nav-link">Home</Link>
               </li>
               <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
@@ -57,7 +57,7 @@ const Home = () => {
                 <Link to="/about" className="nav-link">About</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
           <Link to="/register" className="btn-primary">
             Embark on Your Herbal Journey

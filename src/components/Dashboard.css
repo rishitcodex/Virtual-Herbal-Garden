@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  background: url('../assets/bg2.jpg') no-repeat center center fixed;
+  background: url('public/images/bg2.jpg') ;
   background-size: cover;
   width: 100%;
 }
@@ -15,6 +15,7 @@
 .dashboard-main {
   flex-grow: 1;
   position: relative;
+
 }
 
 .dashboard-content {

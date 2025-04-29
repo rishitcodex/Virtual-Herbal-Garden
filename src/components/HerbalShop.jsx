@@ -109,7 +109,7 @@ const HerbalShop = () => {
 
       {/* Footer */}
       <footer className="herbal-shop-footer">
-        <p>© 2025 Virtual Herbal Garden | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+        <p>© 2025 Virtual Herbal Garden | <a href="/Privacy Policy">Privacy Policy</a> | <a href="#">Contact Us</a></p>
       </footer>
     </div>
   );

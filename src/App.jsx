@@ -6,18 +6,20 @@ import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
 import './styles/base.css';
 import Settings from './components/Settings';
+import AI from './components/Ai';
 import './styles/globals.css';
 import NurseryPage from './components/NurseryPage';
-import HerbalShop from './components/HerbalShop'; // Make sure this path is correct
-// import './ComponentName.css';
+import HerbalShop from './components/HerbalShop';
+import PrivacyPolicy from './components/Privacy Policy';
+import ContactUs from './components/ContactUs';
+import ForgotPassword from './components/ForgotPassword';
+import About from './components/About'; // ✅ Real About component
 
-// Placeholder components for routes
+// Placeholder components for other static routes
 const Services = () => <div className="min-h-screen p-8">Services Page</div>;
 const Pages = () => <div className="min-h-screen p-8">Pages</div>;
-const About = () => <div className="min-h-screen p-8">About Page</div>;
-const ForgotPassword = () => <div className="min-h-screen p-8">Forgot Password Page</div>;
-const Privacy = () => <div className="min-h-screen p-8">Privacy Policy Page</div>;
-const Contact = () => <div className="min-h-screen p-8">Contact Us Page</div>;
+// const About = () => <div className="min-h-screen p-8">About Page</div>; 
+// const Privacy = () => <div className="min-h-screen p-8">Privacy Policy Page</div>;
 
 function App() {
   return (
@@ -31,12 +33,12 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/nurseries" element={<NurseryPage />} />
-          <Route path="/products" element={<HerbalShop />} /> {/* Added products route */}
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<HerbalShop />} />
+          <Route path="/services" element={<AI />} />
+          <Route path="/about" element={<About />} /> {/* ✅ Using actual About component */}
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

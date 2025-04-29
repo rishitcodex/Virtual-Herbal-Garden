@@ -1,0 +1,138 @@
+/* General Body Styling */
+body {
+  font-family: '', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 3px solid #28a745;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.007);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.logo-container h1 {
+  font-size: 28px;
+  color: #28a745;
+  margin: 0;
+}
+
+.logo-container p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Header Section */
+.header-bar {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  font-size: 14px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.header-info span {
+  margin-right: 15px;
+}
+
+.header-icons a {
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+}
+
+footer a {
+  color: #28a745;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Privacy Policy Box Styling */
+.privacy-policy-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.privacy-policy-container h2 {
+  text-align: center;
+  color: #2d572c;
+}
+
+.privacy-policy-container p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.privacy-policy-container h3 {
+  color: #2d572c;
+  margin-top: 15px;
+}

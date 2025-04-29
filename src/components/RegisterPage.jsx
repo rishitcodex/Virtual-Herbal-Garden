@@ -244,30 +244,30 @@ const RegisterPage = () => {
         </div>
 
         <div className="header-content">
-          <div className="logo-container">
-            <h1 className="logo-title">AYUSH</h1>
-            <p className="logo-subtitle">The Virtual Herbal Garden</p>
+        <div className="text-center border-2 border-primary rounded-lg p-2 shadow-md inline-block glass-effect">
+            <h1 className="text-2xl font-bold text-primary m-0">AYUSH</h1>
+            <p className="text-sm text-gray-600 m-0">The Virtual Herbal Garden</p>
           </div>
 
-          <nav>
-            <ul className="nav-menu">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/nurseries" className="nav-link">Nurseries</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/services" className="nav-link">Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/pages" className="nav-link">Pages</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" className="nav-link">About</Link>
-              </li>
-            </ul>
-          </nav>
+          {/* <nav>
+                      <ul className="flex m-0 p-0 mt-10">
+                      <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
+                          <Link to="/Home" className="nav-link">Home</Link>
+                        </li>
+                        <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
+                          <Link to="/nurseries" className="nav-link">Nurseries</Link>
+                        </li>
+                        <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
+                          <Link to="/services" className="nav-link">Services</Link>
+                        </li>
+                        <li className="mx-4 relative after:absolute after:-right-2 after:top-0 after:bottom-0 after:w-px after:bg-primary-dark">
+                          <Link to="/pages" className="nav-link">Pages</Link>
+                        </li>
+                        <li className="mx-4">
+                          <Link to="/about" className="nav-link">About</Link>
+                        </li>
+                      </ul>
+                    </nav> */}
 
           <Link to="/login" className="btn-primary">
             Already Have an Account?
