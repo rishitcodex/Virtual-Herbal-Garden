@@ -10,17 +10,41 @@ import {
   FaYoutube, 
   FaChevronDown 
 } from 'react-icons/fa';
-import products from './products'; // Assuming products data is imported
-import './HerbalShop.css'; // CSS import
+import './HerbalShop.css';
 
 const HerbalShop = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Fetch products from API
   useEffect(() => {
-    filterProducts();
-  }, [selectedCategory, searchTerm]);
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/products');
+        if (!response.ok) throw new Error('Failed to fetch products');
+        const data = await response.json();
+        setProducts(data);
+        setFilteredProducts(data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Filter products when category or search term changes
+  useEffect(() => {
+    if (products.length > 0) {
+      filterProducts();
+    }
+  }, [selectedCategory, searchTerm, products]);
 
   const filterProducts = () => {
     const filtered = products.filter(product => {
@@ -37,6 +61,9 @@ const HerbalShop = () => {
       filterProducts();
     }
   };
+
+  if (loading) return <div className="loading">Loading products...</div>;
+  if (error) return <div className="error">Error: {error}</div>;
 
   return (
     <div className="herbal-shop-container">
@@ -56,9 +83,9 @@ const HerbalShop = () => {
           </div>
         </div>
         <div className="logo-container">
-  <h1>AYUSH</h1>
-  <p>The Virtual Herbal Garden</p>
-</div>
+          <h1>AYUSH</h1>
+          <p>The Virtual Herbal Garden</p>
+        </div>
       </header>
 
       {/* Products Section */}
@@ -93,17 +120,21 @@ const HerbalShop = () => {
         <h2 className="section-title">Our Products</h2>
 
         <div className="products-grid">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
-              <div className="product-info">
-                <h3>{product.name}</h3>
-                <p>{product.description}</p>
-                <p className="price">{product.price}</p>
-                <button className="add-to-cart">Add to Cart</button>
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <div key={product._id || product.id} className="product-card">
+                <img src={product.image} alt={product.name} />
+                <div className="product-info">
+                  <h3>{product.name}</h3>
+                  <p>{product.description}</p>
+                  <p className="price">{product.price}</p>
+                  <button className="add-to-cart">Add to Cart</button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No products found matching your criteria.</p>
+          )}
         </div>
       </section>
 
